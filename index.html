@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>Frontend Mentor | Interactive card details form</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Overpass&family=Space+Grotesk&display=swap" rel="stylesheet">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+</head>
+<body>
+
+
+  <div class="main-part">
+  <div class="card-image">
+  </div>
+  <div class="form-box">
+    <form class="input-form" action="index.html" method="post">
+      <p>Cardholder Name</p>
+      <input class="card-holder" type="text" name="" value="" placeholder="  e.g. Jane Appleseed" id="holder-name">
+      <p class="correction corrector">can't be blank</p>
+      <p>Card Number</p>
+      <input class="card-number" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" / type="tel" name="" value="" placeholder="e.g. 1234 5678 9123 0000" id="card_num">
+      <p class="corrector correction">Wrong format</p>
+      <div class="exp-date">
+
+        <div class="exp">
+          <p> Exp. Date (MM/YY)</p>
+          <div class="date">
+            <div class="">
+              <input type="text" name="" value="" placeholder="MM" id="month">
+              <p class=" correction corrector">Can't be blank</p>
+            </div>
+            <div class="">
+              <input type="text" name="" value="" placeholder="YY" id="year">
+              <p class=" correction corrector">can't be blank</p>
+            </div>
+          </div>
+
+        </div>
+        <div class="cvc-class">
+          <p>CVC</p>
+          <div class="">
+            <input type="text" name="" value="" placeholder="e.g. 123" id="cvc-number">
+            <p class=" correction corrector">can't be blank</p>
+           </div>
+          </div>
+      </div>
+      <button class="confirm-btn confirm-btn-form" type="button" name="button">Confirm</button>
+    </form>
+    <div class="thank-u-card">
+   <img src="images/icon-complete.svg" alt="">
+   <h1>THANK YOU!</h1>
+   <p>We've added your card details</p>
+   <button id="confirm-thankyou" class="confirm-btn" type="button" name="button">confirm</button>
+    </div>
+  </div>
+
+
+ <div class="credit">
+  <div class="credit-card-front">
+     <img src="images/card-logo.svg" alt="">
+     <p id="number_card">
+       <span id="number_card1">0000</span>
+       <span id="number_card2">0000</span>
+       <span id="number_card3">0000</span>
+       <span id="number_card4">0000</span>
+        </p>
+     <div class="credit-info">
+  <p id="name-of-person">Jane Appleseed</p>
+  <p><span id="month-date">00</span>/<span id="year0fDate">00</span></p>
+     </div>
+  </div>
+
+  <div class="back-of-credit">
+  <p id="cvcNumber">000</p>
+  </div>
+  </div>
+  </div>
+
+
+
+
+  <!--
+
+
+
+  000 -->
+
+
+  <script src="index.js">
+
+  </script>
+</body>
+</html>
